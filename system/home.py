@@ -7,8 +7,10 @@ home_window = tk.Tk()
 home_window.title("Cat-OS Home")
 home_window.config(bg="#222222")
 
-# The 'app' folder is one level up from the 'system' folder
-apps_folder = "../app"
+# Get the directory where home.py is located
+home_dir = os.path.dirname(os.path.abspath(__file__))
+# Go up one level to the main cat-os directory and then to the 'app' folder
+apps_folder = os.path.join(home_dir, "..", "app")
 
 def run_app(app_name):
     app_path = os.path.join(apps_folder, app_name + ".py")
