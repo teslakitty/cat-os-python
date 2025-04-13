@@ -13,7 +13,7 @@ def start_home():
     subprocess.run(["python3", home_path])
 
 if __name__ == "__main__":
-    lock_window = tk.Tk()
+    lock_window = tk.Tk() # Create the main window for the lock screen
     lock_window.title("Cat-OS Lock Screen")
     lock_window.config(bg="#222222") # Very dark gray background
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
     lock_window.bind("<space>", run_home_screen)
     lock_window.bind("<Return>", run_home_screen) # <Return> is the Enter key
 
-    lock_window.mainloop()
+    lock_window.mainloop() # Start the Tkinter event loop for the lock screen
